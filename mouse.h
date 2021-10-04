@@ -33,8 +33,8 @@ extern MOUSE mouse;
 //※extern は、外部に関数がありますよ！という目印でつけています。
 
 extern VOID MouseUpdate(VOID);								//マウスの入力情報を更新する
-extern BOOL MouseDown(int MOUSE_INPUT_);					//ボタンを押しているか、マウスコードで判断する
-extern BOOL MouseUp(int MOUSE_INPUT_);						//ボタンを押し上げたか、マウスコードで判断する
+extern BOOL MouseDown(int MOUSE_INPUT_);					//ボタンを押しているか、マウスコードで判断
+extern BOOL MouseUp(int MOUSE_INPUT_);						//ボタンを押し上げたか、マウスコードで判断
 extern BOOL MouseDownKeep(int MOUSE_INPUT_, int milliTime);	//ボタンを押し続けているか、マウスコードで判断する
 extern BOOL MouseClick(int MOUSE_INPUT_);					//マウスをクリックしたか、マウスコードで判断する
 extern VOID MouseDraw(VOID);								//マウスの情報を描画する
