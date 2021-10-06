@@ -316,7 +316,6 @@ VOID GameDelete(VOID)
 /// <param name=""></param>
 VOID GameInit(VOID)
 {
-
 	//ゲーム内時間リセット
 	ResetGameTime();
 
@@ -336,6 +335,7 @@ VOID GameInit(VOID)
 /// <param name="scene">シーン</param>
 VOID ChangeScene(GAME_SCENE scene)
 {
+
 	GameScene = scene;	//シーンを切り替え
 	IsFadeIn = FALSE;	//フェードインしない
 	IsFadeOut = TRUE;	//フェードアウトする
@@ -418,6 +418,8 @@ VOID TitleProc(VOID)
 
 	//マップの当たり判定を取得
 	{
+
+
 		muki = muki_none;	//最初は向きを無しにする
 		DIVIMAGE dummy = samplePlayerImg;	//当たり判定のダミーを作成 
 		//ダミーを先行させて当たらなければダミーが本体に代わる
@@ -462,7 +464,7 @@ VOID TitleDraw(VOID)
 
 	//プレイヤーの動作サンプル
 	{
-		//dddddDrawDivImageChara(&samplePlayerImg);//サンプル分割画像の描画
+		//DrawDivImageChara(&samplePlayerImg);//サンプル分割画像の描画
 		DrawDivImageChara(&samplePlayerImg);
 		//DrawDivImageChara(&samplePlayerImg3);
 	}
@@ -523,6 +525,10 @@ VOID Play(VOID)
 /// </summary>
 VOID PlayProc(VOID)
 {
+
+	samplePlayerImg.x = 0;
+	samplePlayerImg.y = 0;
+
 	if (KeyClick(KEY_INPUT_RETURN) == TRUE)
 	{
 
